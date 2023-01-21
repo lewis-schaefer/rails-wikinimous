@@ -1,5 +1,13 @@
 <h2>Articles</h2>
-<%= link_to "Add Article", new_article_path, class: "btn btn-primary" %>
-<% @articles.each do |article| %>
-  <h5><%= link_to article.title, article_path(article) %></h3>
-<% end %>
+<div class="d-flex align-items-center justify-content-around flex-wrap">
+  <% @articles.each do |article| %>
+    <div class="card" style="width: 320px; height: 160px; margin: 5px;">
+      <div class="card-header">
+        <h5><%= link_to article.title, article_path(article), class: "nav-link active" %></h3>
+      </div>
+      <div class="card-body">
+        <p><%= article.content %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

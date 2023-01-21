@@ -12,13 +12,19 @@
   </head>
 
   <body>
-    <header class="bg-light">
-      <div class="ms-3 d-inline-block">
+    <header class="bg-light d-flex justify-content-between align-items-center">
+      <div class="ms-3">
         <H1>ArticlePedia</H1>
       </div>
-      <ul class="nav justify-content-end d-inline-block">
+      <ul class="nav justify-content-end">
         <li class="nav-item">
           <%= link_to "Add Article", new_article_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank" class="nav-link active">Wikipedia</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page" target="_blank" class="nav-link active">Wiktionary</a>
         </li>
       </ul>
     </header>
