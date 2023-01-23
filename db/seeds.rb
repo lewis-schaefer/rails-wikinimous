@@ -6,11 +6,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts 'cleaning db'
+Article.destroy_all
+
 puts 'Creating 10 fake articles...'
 10.times do
   article = Article.new(
-    title:    Faker::Music::RockBand.name,
-    content: Faker::Quotes::Shakespeare.hamlet_quote,
+    title: Faker::Music::RockBand.name,
+    description: Faker::Quotes::Shakespeare.hamlet_quote,
+    content: Faker::Lorem.paragraphs
   )
   article.save!
 end

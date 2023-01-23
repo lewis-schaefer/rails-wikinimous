@@ -1,5 +1,11 @@
 <h2><%= @article.title %></h3>
-<p><%= @article.content %></P>
+<p><%= @article.content %></p>
+<!--
+<%# <% text = JSON.parse @article.content %> %>
+<%# <% text.each do |para| %> %>
+  <%# <p><%= para %></p> %>
+<%# <% end %> %>
+-->
 <p><%= link_to "Articles", articles_path, class: "btn btn-primary" %></p>
 <p><%= link_to "Edit Article", edit_article_path, class: "btn btn-primary" %></p>
 <p><%= link_to "Delete",
